@@ -13,7 +13,7 @@ function App() {
       <div className="min-h-full flex flex-col items-center justify-center p-6">
         <div>
           <h1 className={`${textSize} font-semibold`}>
-            Hello React + Tailwind
+            Hello React + Tailwind CSS
           </h1>
         </div>
       </div>
