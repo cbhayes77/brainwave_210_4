@@ -1,25 +1,26 @@
+import { useState } from "react";
 import Container from "../ui/Container.jsx";
 import { NavLink } from "react-router-dom";
 
 const links = [
-  { to: "/features", label: "Features" },
-  { to: "/pricing", label: "Pricing" },
-  { to: "/how-to-use", label: "How to Use" },
-  { to: "/roadmap", label: "Roadmap" },
+  { to: "/about", label: "About Me" },
+  { to: "/portfolio", label: "Portfolio" },
+  { to: "/resume", label: "Resume" },
 ];
 
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-black/70 backdrop-blur">
-      <Container className="flex h-16 items-center justify-between">
+      <Container className="flex h-16 items-center">
         {/* Left: Logo/Brand */}
-        <a href="/" className="flex items-center gap-2">
-          <span className="inline-block h-6 w-6 rounded bg-white/80 aria-hidden"></span>
-          <span className="text-white font-semibold">Brainwave</span>
-        </a>
+        <div className="flex-1 flex justify-start">
+          <a href="/" className="flex items-center gap-2">
+            <span className="text-white font-semibold">CB Hayes</span>
+          </a>
+        </div>
         {/* Center: Navigation links (hidden on small screens) */}
-        <nav className="hidden md:block">
-          <ul className="flex items-center gap-6 text-sm text-white/80">
+        <nav className="flex justify-center flex-none text-center">
+          <ul className="hidden md:flex items-center gap-6 text-sm text-white/80">
             {links.map((link) => (
               <li key={link.to}>
                 <NavLink
@@ -36,6 +37,10 @@ export default function Navbar() {
             ))}
           </ul>
         </nav>
+        {/* Right: CTA / mobile button */}
+        <div className="flex-1 flex justify-end">
+            <a href="/contact" className="text-white/80">Contact Me</a>
+        </div>
       </Container>
     </header>
   );
