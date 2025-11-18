@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function SEO({ title, description, image = "/vite.svg", url = window.location.href, type = "website" }) {
+export default function SEO({ title, description, image = "/portfolio-svgrepo-com.svg", url = window.location.href, type = "website" }) {
   const siteName = "Christopher Hayes - Portfolio";
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
 
