@@ -5,10 +5,16 @@ import TechStack from "../sections/TechStack.jsx";
 import Projects from "../sections/Projects.jsx";
 import Testimonials from "../sections/Testimonials.jsx";
 import FinalCTA from "../sections/FinalCTA.jsx";
+import SEO from "../components/ui/SEO.jsx";
 
 export default function Home() {
   return (
     <div>
+      <SEO
+        title="Home Page for Chris Hayes - Sr. UX Director, Product Designer, Front-end Engineer - Portfolio"
+        description="This is where the description of the the home page goes. Showcasing Chris Hayes' work as a Sr. UX Director, Product Designer, and Front-end Engineer."
+        url="/"
+      />
       <Section
         as="section"
         aria-labelledby="intro-heading"
